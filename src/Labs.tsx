@@ -65,7 +65,7 @@ function NumberLab({ lang }: P) {
         <input aria-label="Number" value={val} onChange={(e) => setVal(e.target.value.trim())} className="min-w-0 flex-1 rounded-xl border border-slate-300 px-3 py-2.5 font-mono text-lg outline-none focus:border-indigo-500" placeholder="2026" />
       </div>
       {!valid && val && <p className="text-sm text-rose-600">{L({ bn: 'এই বেসের জন্য সঠিক অঙ্ক দিন (সর্বোচ্চ ১২টি)।', en: 'Enter valid digits for this base (max 12).' })}</p>}
-      <div className="grid gap-2 sm:grid-cols-2">
+      <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
         {bases.map((b) => (
           <div key={b.b} className={`rounded-2xl p-3 ${b.b === from ? 'bg-indigo-50 ring-2 ring-indigo-200' : 'bg-slate-50'}`}>
             <p className="text-xs font-semibold text-slate-500">{L(b.t)}</p>

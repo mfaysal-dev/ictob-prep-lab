@@ -102,7 +102,7 @@ function Home({ lang, stats, runs, go, startPractice }: Base & { stats: Stats; r
       </div>
       <section>
         <h3 className="mb-2 font-bold">{L({ bn: 'সেগমেন্ট বেছে অনুশীলন করুন', en: 'Practise by segment' })}</h3>
-        <div className="grid gap-2 sm:grid-cols-2">
+        <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
           {segments.map((s) => {
             const I = segIcon[s.icon], sa = accuracy(stats, s.id), total = questions.filter((q) => q.seg === s.id).length
             return (
